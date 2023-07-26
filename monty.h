@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <stddef.h>
 #include <string.h>
+#include <unistd.h>
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -35,5 +36,29 @@ typedef struct instruction_s
 	char *opcode;
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
+
+/**
+ * struct bus_s - stores argument, file and content
+ * @file: the file
+ * @content: line content
+ * @arg: the argument
+ *
+ * Description: stores the argument, file
+ * and file content from the opcodes file
+ */
+typedef struct bus_s
+{
+	FILE *file;
+	char *content;
+	char *arg;
+} bus_t;
+
+extern bus_t bus;
+
+void _push(stack_t **head, unsigned int count);
+void _pall(stack_t **head, unsigned int count);
+int execute(stack_t **head, unsigned int count, FILE *file, char *content);
+ssize_t _getline(char **lineptr, size_t *n, FILE *stream);
+void free_stack(stack_t *head);
 
 #endif
