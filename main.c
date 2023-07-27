@@ -15,7 +15,7 @@ int main(int argc, char **argv)
 	FILE *file;
 	char *content = NULL;
 	stack_t *stack = NULL;
-	unsigned int count = 0;
+	unsigned int count = 1;
 	size_t size = 0;
 	ssize_t read = 1;
 

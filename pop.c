@@ -11,7 +11,6 @@ void _pop(stack_t **head, unsigned int count)
 {
 	stack_t *ptr;
 
-	count += 1;
 	if (!(*head))
 	{
 		fprintf(stderr, "L%d: can't pop an empty stack\n", count);
