@@ -33,7 +33,11 @@ int main(int argc, char **argv)
 	bus.file = file;
 	while (read > 0)
 	{
-		content = NULL;
+		if (content)
+		{
+			free(content);
+			content = NULL;
+		}
 		read = _getline(&content, &size, file);
 		bus.content = content;
 		if (read < 0)

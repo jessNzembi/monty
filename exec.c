@@ -14,8 +14,8 @@ int execute(stack_t **stack, unsigned int count, FILE *file, char *content)
 	instruction_t instructions[] = {
 		{"push", _push},
 		{"pall", _pall},
-		/*{"pint", _pint},
-		{"pop", _pop},
+		{"pint", _pint},
+		/*{"pop", _pop},
 		{"swap", _swap},
 		{"add", _add},
 		{"nop", nop},*/
