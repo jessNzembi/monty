@@ -18,7 +18,7 @@ int execute(stack_t **stack, unsigned int count, FILE *file, char *content)
 		{"pop", _pop},
 		{"swap", _swap},
 		{"add", _add},
-		/*{"nop", nop},*/
+		{"nop", _nop},
 		{NULL, NULL}
 	};
 	unsigned int i = 0;
